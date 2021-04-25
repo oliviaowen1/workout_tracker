@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const Workout = require('../models/Workout');
 
+// /api isnt needed here as we referance this in index routes
+
 router.get("/workouts", (req, res) => {
     Workout.find({})
         .then(dbWorkout => {
